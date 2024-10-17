@@ -119,6 +119,7 @@ public class Main {
 
         do {
             // Display the submenu options
+
             System.out.println("Please enter an option: ");
             System.out.println("1) Display All Transactions");
             System.out.println("2) Display All Deposits");
