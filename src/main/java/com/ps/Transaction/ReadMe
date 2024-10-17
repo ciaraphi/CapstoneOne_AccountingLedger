@@ -1,0 +1,17 @@
+Java CLI Transaction Tracker
+
+Description:
+This project is a Command Line Interface (CLI) application built in Java that helps users manage
+ and track their financial transactions such as deposits and payments.
+ Users can add transactions, view their transaction history, generate reports,
+ and search for transactions by vendor. All transactions are stored persistently in a CSV file.
+
+Features:
+
+Add Deposits: Log income or any kind of credit.
+Make Payments: Log expenses or debits.
+View Ledger: Display all transactions, deposits only, or payments only.
+Reports: (Work in progress) Generate summaries such as month-to-date or year-to-date.
+Search by Vendor: Find transactions by specifying a vendor.
+CSV Storage: All transactions are stored in a transactions.csv file for future reference.
+

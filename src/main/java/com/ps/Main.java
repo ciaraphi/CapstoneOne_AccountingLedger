@@ -19,6 +19,7 @@ public class Main {
         loadTransactionFromFile();
 
         int mainMenuCommand;
+
         do {
             System.out.println("Choose an option:");
             System.out.println("1 - Add Deposit");
@@ -27,8 +28,9 @@ public class Main {
             System.out.println("0 - Exit");
 
             try {
-                mainMenuCommand = commandScanner.nextInt();
+                mainMenuCommand =commandScanner.nextInt();
             } catch (InputMismatchException ime) {
+                System.out.println("Invalid input, enter a valid input");
                 ime.printStackTrace();
                 mainMenuCommand = 0;
                 commandScanner.nextLine(); // Clear invalid input
@@ -66,7 +68,8 @@ public class Main {
         String vendor = inputScanner.nextLine();
         System.out.print("Enter amount: ");
         double amount = inputScanner.nextDouble();
-        inputScanner.nextLine(); // Clear the buffer
+        inputScanner.nextLine();
+        // Clear the buffer
 
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
