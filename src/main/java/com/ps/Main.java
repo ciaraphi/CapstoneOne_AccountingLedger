@@ -18,15 +18,21 @@ public class Main {
         // Load existing transactions at startup
         loadTransactionFromFile();
 
+// Begin menu instructions
         int mainMenuCommand;
 
+        //create a do while loop with a conditional
         do {
+            //display menu sout
+
             System.out.println("Choose an option:");
             System.out.println("1 - Add Deposit");
             System.out.println("2 - Make Payment");
             System.out.println("3 - Ledger");
             System.out.println("0 - Exit");
 
+            // import scanner
+            // use scanner to store users command input
             try {
                 mainMenuCommand =commandScanner.nextInt();
             } catch (InputMismatchException ime) {
@@ -39,6 +45,7 @@ public class Main {
             // Switch statement to match the user command to the provided cases
             switch (mainMenuCommand) {
                 case 1:
+                    // create static methods
                     addDeposit();
                     break;
                 case 2:
@@ -50,12 +57,14 @@ public class Main {
                 case 0:
                     System.out.println("Exiting");
                     break;
+                    // handle incorrect commands
                 default:
                     System.out.println("Command not found, please try again");
             }
 
         } while (mainMenuCommand != 0);
     }
+    // END menu instructions
 
     private static void loadTransactionFromFile() {
     }
